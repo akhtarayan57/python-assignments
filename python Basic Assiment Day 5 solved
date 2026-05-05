@@ -1,0 +1,264 @@
+# ============================================================
+# Python Basics - Day 5 Assignment SOLVED
+# ============================================================
+
+# ============================================================
+# PRINT YOUR NAME
+# ============================================================
+
+print("My name is Mukesh\nI love Python!")
+
+# ============================================================
+# VARIABLES - BASIC
+# ============================================================
+
+# Define variables
+mukesh = 7
+z = 6
+rohan = 5
+longitude = 4
+
+# Print the variable with value 5 (rohan)
+print(rohan)  # Output: 5
+
+# ============================================================
+# DECLARING VARIABLES
+# ============================================================
+
+ur_age = 21
+ur_weight = 50.6
+ur_first_name = 'Mukesh'
+ur_last_name = "Manral"
+
+# Print types
+print(type(ur_age))        # <class 'int'>
+print(type(ur_weight))     # <class 'float'>
+print(type(ur_first_name)) # <class 'str'>
+print(type(ur_last_name))  # <class 'str'>
+
+# Print values
+print(ur_age)
+print(ur_weight)
+print(ur_first_name)
+print(ur_last_name)
+
+# Boolean comparison
+ur_first_name = 'Mukesh'
+ur_last_name = 'Mukesh'
+TrueOrFalse = (ur_last_name == ur_first_name)
+print(TrueOrFalse)  # True (both are 'Mukesh')
+
+# Variable x = 777
+x = 777
+print(x)
+
+# ============================================================
+# ARITHMETIC OPERATORS
+# ============================================================
+
+x = 7
+y = 77
+z = 77.7
+zz = 'Hi'
+
+print(x + z)    # Addition:       84.7
+print(z - y)    # Subtraction:    0.7
+print(x * z)    # Multiplication: 543.9
+print(x ** z)   # Exponent:       7 raised to power 77.7
+print(x / z)    # Division:       0.09010...
+print(x // z)   # Floor Division: 0.0
+print(x % z)    # Modulo:         7.0
+
+# ============================================================
+# COMPARISON OPERATORS
+# ============================================================
+
+print(x < z)    # Less than:              True
+print(type(x < z))  # Type of comparison: <class 'bool'>
+print(x <= z)   # Less than or equal:     True
+print(x == z)   # Equal to:               False
+print(x > z)    # Greater than:           False
+print(x >= z)   # Greater than or equal:  False
+print(x != z)   # Not equal to:           True
+
+# ============================================================
+# LOGICAL OPERATORS
+# ============================================================
+
+# AND - both must be True
+print((108 == 108) and (21 == 21))   # True
+
+# Conditions that give False with 'and'
+print((108 == 109) and (21 == 21))   # False - first is False
+print((108 == 108) and (21 == 22))   # False - second is False
+print((108 == 109) and (21 == 22))   # False - both are False
+
+# OR - only one needs to be True
+print((108 == 108) or (21 == 11))    # True
+
+# OR example
+print((108 == 108) or (21 == 11) or (108 <= 11))  # True
+
+# ============================================================
+# IF - ELIF - ELSE
+# ============================================================
+
+money = 100000
+print(money > 2000)  # True
+
+# if-else
+money = 10000
+if money > 1000:
+    print("You can afford the Data Science course!")
+else:
+    print("You don't have enough money.")
+
+# if-elif-else
+test_score = 80
+if test_score > 80:
+    print("A grade")
+elif test_score > 60 and test_score <= 80:
+    print("B grade")
+else:
+    print("Nothing for you")
+
+# ============================================================
+# PYTHON LOOPS
+# ============================================================
+
+# for loop - range(10)
+for iterating_variable in range(10):
+    print(iterating_variable)
+
+# Print 'I love sports' 10 times
+for i in range(10):
+    print('I love sports')
+
+# while loop
+number = 0
+while number < 10:
+    print(number)
+    number += 1
+
+# ============================================================
+# BREAK STATEMENT
+# ============================================================
+
+for num in range(10):
+    print('The number is ' + str(num))
+    if num == 5:
+        break
+
+# ============================================================
+# CONTINUE STATEMENT
+# ============================================================
+
+for num in range(10):
+    if num == 5:
+        continue
+    print('The number is ' + str(num))
+
+# ============================================================
+# STRING MANIPULATION
+# ============================================================
+
+string_ = "We are creating next generation data science eco-system at CollegeRanker"
+
+# Length of string
+print(len(string_))            # 72
+
+# Access with positive indexing
+print(string_[0])              # 'W'
+
+# Access with negative indexing
+print(string_[-1])             # 'r'
+
+# Slicing
+print(string_[:6])             # 'We are'  (first 6 chars)
+print(string_[7:-10])          # 'creating next generation data science eco-system at College'
+
+# Count a character
+print(string_.count('e'))      # count of 'e'
+
+# Count a substring
+print(string_.count('ing'))    # count of 'ing'
+
+# find and index
+print(string_.find('data'))    # returns starting index of 'data', or -1 if not found
+print(string_.index('data'))   # returns starting index, gives error if not found
+
+# startswith / endswith
+print(string_.startswith('We'))          # True
+print(string_.endswith('CollegeRanker')) # True
+
+# Upper case
+print(string_.upper())
+
+# Capitalize (first character only)
+print(string_.capitalize())
+
+# isLower / isUpper
+print(string_.islower())  # False
+print(string_.isupper())  # False
+
+# isdigit, isalpha, isalnum
+print("12345".isdigit())    # True
+print("Hello".isalpha())    # True
+print("Hello123".isalnum()) # True
+
+# Replace
+new_str = "C++ is easy to learn"
+print(new_str.replace("C++", "Python"))  # Python is easy to learn
+
+# Split
+print(new_str.split())  # ['C++', 'is', 'easy', 'to', 'learn']
+
+# ============================================================
+# PYTHON FUNCTIONS
+# ============================================================
+
+# Basic function with parameter
+def welcome_message(name):
+    print('Welcome to Functions !!! ' + name)
+
+welcome_message("Mukesh")
+
+# Function to add two numbers
+def add_numbers():
+    total = 3 + 4
+    print(total)
+
+add_numbers()  # 7
+
+# Subtraction function (positional arguments)
+def substraction_function(small_number, large_number):
+    return large_number - small_number
+
+# Pass arguments in right order
+print(substraction_function(3, 10))   # 7
+
+# Pass using keyword arguments (order doesn't matter)
+print(substraction_function(large_number=10, small_number=3))  # 7
+
+# ============================================================
+# SCOPE OF VARIABLES
+# ============================================================
+
+# Global variable
+global_variable = 'variable outside of function'
+
+def random_function():
+    return global_variable
+
+print(random_function())  # variable outside of function
+
+# Changing global variable INSIDE function creates a LOCAL copy
+global_variable = 'variable outside of function'
+
+def random_function():
+    global_variable = 'changing variable outside of function from inside of function'
+    return global_variable
+
+print(random_function())   # changing variable outside of function from inside of function
+print(global_variable)     # variable outside of function  <-- UNCHANGED globally!
+# Note: The global variable is NOT changed! A new local variable was created inside.
